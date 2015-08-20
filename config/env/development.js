@@ -1,7 +1,8 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/workouter-dev',
+	//db: 'mongodb://localhost/workouter-dev',
+	db: 'ds033113.mongolab.com:33113/heroku_zb3hksd7',
 	app: {
 		title: 'workouter - Development Environment'
 	},
