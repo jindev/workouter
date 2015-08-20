@@ -1,0 +1,14 @@
+<section data-ng-controller="HomeController" data-ng-init="findMainWorkout()">
+    <div class="list-group">
+            <div data-ng-repeat="mainworkout in mainworkouts" class="col-lg-3 main-item">
+                <img src="/modules/mainworkouts/img/back.png" />
+                <small class="list-group-item-text">
+                    Posted on
+                    <span data-ng-bind="mainworkout.created | date:'medium'"></span>
+                    by
+                    <span data-ng-bind="mainworkout.user.displayName"></span>
+                </small>
+                <h4 class="list-group-item-heading" data-ng-bind="mainworkout.name"></h4>
+            </div>
+    </div>
+</section>
