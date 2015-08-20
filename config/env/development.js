@@ -2,7 +2,7 @@
 
 module.exports = {
 	//db: 'mongodb://localhost/workouter-dev',
-	db: 'ds033113.mongolab.com:33113/heroku_zb3hksd7',
+  db: process.env.MONGOHQ_URL || "mongodb://heroku_zb3hksd7:krk3rjhkouaa3jh6bfteaim1g5@ds033113.mongolab.com:33113/heroku_zb3hksd7",
 	app: {
 		title: 'workouter - Development Environment'
 	},
