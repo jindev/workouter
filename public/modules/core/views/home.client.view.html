@@ -1,7 +1,7 @@
 <section data-ng-controller="HomeController" data-ng-init="findMainWorkout()">
     <div class="list-group">
             <div data-ng-repeat="mainworkout in mainworkouts" class="col-lg-3 main-item">
-                <img src="/modules/mainworkouts/img/back.png" />
+                <img ng-src="/modules/mainworkouts/img/{{mainworkout.img}}" />
                 <small class="list-group-item-text">
                     Posted on
                     <span data-ng-bind="mainworkout.created | date:'medium'"></span>
