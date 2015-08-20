@@ -7,21 +7,15 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 /**
- * Mainworkout Schema
+ * Specificworkout Schema
  */
-var MainworkoutSchema = new Schema({
+var SpecificworkoutSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Mainworkout name',
+		required: 'Please fill Specificworkout name',
 		trim: true
 	},
-  img: {
-    type: String,
-    default: '',
-    required: 'Please fill Mainworkout img name',
-    trim: true
-  },
 	created: {
 		type: Date,
 		default: Date.now
@@ -32,4 +26,4 @@ var MainworkoutSchema = new Schema({
 	}
 });
 
-mongoose.model('Mainworkout', MainworkoutSchema);
+mongoose.model('Specificworkout', SpecificworkoutSchema);

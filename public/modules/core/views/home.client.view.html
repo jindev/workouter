@@ -1,14 +1,13 @@
 <section data-ng-controller="HomeController" data-ng-init="findMainWorkout()">
     <div class="list-group">
-            <div data-ng-repeat="mainworkout in mainworkouts" class="col-lg-3 main-item">
-                <img ng-src="/modules/mainworkouts/img/{{mainworkout.img}}" />
-                <small class="list-group-item-text">
-                    Posted on
-                    <span data-ng-bind="mainworkout.created | date:'medium'"></span>
-                    by
-                    <span data-ng-bind="mainworkout.user.displayName"></span>
-                </small>
-                <h4 class="list-group-item-heading" data-ng-bind="mainworkout.name"></h4>
+        <div data-ng-repeat="mainworkout in mainworkouts" class="col-lg-3 main-item">
+            <div>
+                <input type="checkbox">
+                    <img ng-src="/modules/mainworkouts/img/{{mainworkout.img}}" />
+                    <h4 class="list-group-item-heading" data-ng-bind="mainworkout.name"></h4>
+                </input>
             </div>
+        </div>
     </div>
+    <button class="btn btn-lg btn-danger" ng-click="goToSpecificWorkout()">Submit</button>
 </section>

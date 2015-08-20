@@ -1,8 +1,8 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication','Mainworkouts',
-	function($scope, Authentication, Mainworkouts) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication','Mainworkouts','$location',
+	function($scope, Authentication, Mainworkouts,$location) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 
@@ -17,6 +17,11 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
       $scope.mainworkout = Mainworkouts.get({
         mainworkoutId: $stateParams.mainworkoutId
       });
+    };
+
+
+    $scope.goToSpecificWorkout = function(){
+      $location.path('/specificworkouts');
     };
 	}
 ]);

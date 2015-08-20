@@ -9,7 +9,8 @@ angular.module('mainworkouts').controller('MainworkoutsController', ['$scope', '
 		$scope.create = function() {
 			// Create new Mainworkout object
 			var mainworkout = new Mainworkouts ({
-				name: this.name
+				name: this.name,
+				img : this.img
 			});
 
 			// Redirect after save

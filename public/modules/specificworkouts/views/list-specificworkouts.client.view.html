@@ -1,0 +1,19 @@
+<section data-ng-controller="SpecificworkoutsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Specificworkouts</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="specificworkout in specificworkouts" data-ng-href="#!/specificworkouts/{{specificworkout._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="specificworkout.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="specificworkout.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="specificworkout.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!specificworkouts.$resolved || specificworkouts.length">
+    	No Specificworkouts yet, why don't you <a href="/#!/specificworkouts/create">create one</a>?
+    </div>
+</section>
