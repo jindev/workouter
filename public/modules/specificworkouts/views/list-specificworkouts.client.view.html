@@ -1,19 +1,10 @@
 <section data-ng-controller="SpecificworkoutsController" data-ng-init="find()">
-
-
     <div ng-repeat="specificworkout in specificworkouts" jqyoui-droppable="{multiple:true}">
         <div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'valid'}" ng-model="specificworkout" jqyoui-draggable="{animate:true}" ng-hide="!specificworkout.name" >{{specificworkout.name}}</div>
     </div>
 
-
-
-
     <div class="thumbnail" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="list2" jqyoui-droppable style='height:50px;'>
         <div class="btn btn-success" data-drag="true"  ng-model="list2" jqyoui-draggable ng-hide="!list2.name">{{list2.name}}</div>
     </div>
-
-
-
-
 </section>
 
