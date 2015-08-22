@@ -17,6 +17,9 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 			],
 			js: [
+				'public/lib/jquery/dist/jquery.min.js',
+				'public/lib/jquery-ui/jquery-ui.js',
+				'public/lib/bootstrap/dist/js/bootstrap.min.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js', 
 				'public/lib/angular-cookies/angular-cookies.js', 
@@ -25,7 +28,10 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/angular-dragdrop/src/angular-dragdrop.js',
+				'https://www.youtube.com/iframe_api',
+				'public/lib/angular-youtube-mb/src/angular-youtube-embed.js'
 			]
 		},
 		css: [

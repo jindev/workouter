@@ -1,15 +1,18 @@
 'use strict';
 
 // Specificworkouts controller
-angular.module('specificworkouts').controller('SpecificworkoutsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Specificworkouts',
-	function($scope, $stateParams, $location, Authentication, Specificworkouts) {
+angular.module('specificworkouts').controller('SpecificworkoutsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Specificworkouts','Mainworkouts',
+	function($scope, $stateParams, $location, Authentication, Specificworkouts, Mainworkouts) {
 		$scope.authentication = Authentication;
 
 		// Create new Specificworkout
 		$scope.create = function() {
+			console.log(this.type.name);
 			// Create new Specificworkout object
 			var specificworkout = new Specificworkouts ({
-				name: this.name
+				name: this.name,
+				type : this.type.name,
+				url : this.url
 			});
 
 			// Redirect after save
@@ -62,5 +65,15 @@ angular.module('specificworkouts').controller('SpecificworkoutsController', ['$s
 				specificworkoutId: $stateParams.specificworkoutId
 			});
 		};
+
+		$scope.findMainWorkout = function(){
+			$scope.mainworkouts = Mainworkouts.query();
+		};
+
+		$scope.list1 = {title: 'AngularJS - Drag Me'};
+		$scope.list2 = {};
+
+		$scope.anotherGoodOne = 'https://www.youtube.com/watch?v=18-xvIjH8T4';
+
 	}
 ]);

@@ -1,19 +1,19 @@
 <section data-ng-controller="SpecificworkoutsController" data-ng-init="find()">
-    <div class="page-header">
-        <h1>Specificworkouts</h1>
+
+
+    <div ng-repeat="specificworkout in specificworkouts" jqyoui-droppable="{multiple:true}">
+        <div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'valid'}" ng-model="specificworkout" jqyoui-draggable="{animate:true}" ng-hide="!specificworkout.name" >{{specificworkout.name}}</div>
     </div>
-    <div class="list-group">
-        <a data-ng-repeat="specificworkout in specificworkouts" data-ng-href="#!/specificworkouts/{{specificworkout._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="specificworkout.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="specificworkout.user.displayName"></span>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="specificworkout.name"></h4>
-        </a>
+
+
+
+
+    <div class="thumbnail" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="list2" jqyoui-droppable style='height:50px;'>
+        <div class="btn btn-success" data-drag="true"  ng-model="list2" jqyoui-draggable ng-hide="!list2.name">{{list2.name}}</div>
     </div>
-    <div class="alert alert-warning text-center" data-ng-hide="!specificworkouts.$resolved || specificworkouts.length">
-    	No Specificworkouts yet, why don't you <a href="/#!/specificworkouts/create">create one</a>?
-    </div>
+
+
+
+
 </section>
+

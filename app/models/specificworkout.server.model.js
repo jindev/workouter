@@ -16,6 +16,17 @@ var SpecificworkoutSchema = new Schema({
 		required: 'Please fill Specificworkout name',
 		trim: true
 	},
+	type: {
+		type: String,
+		default: '',
+		required: 'Please fill Specificworkout type',
+		trim: true
+	},
+	url:{
+		type : String,
+		default : '',
+		trim : true
+	},
 	created: {
 		type: Date,
 		default: Date.now
